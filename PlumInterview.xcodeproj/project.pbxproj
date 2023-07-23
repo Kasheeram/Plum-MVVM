@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7D5010478C0C9324CE4CFDBD /* Pods_PlumInterview.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 171CC001EE01781F0A3909FC /* Pods_PlumInterview.framework */; };
 		8901787B2A6BD10300B760A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8901787A2A6BD10300B760A9 /* AppDelegate.swift */; };
 		8901787D2A6BD10300B760A9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8901787C2A6BD10300B760A9 /* SceneDelegate.swift */; };
 		8901787F2A6BD10300B760A9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8901787E2A6BD10300B760A9 /* ViewController.swift */; };
@@ -38,8 +37,6 @@
 		890178972A6BD5B600B760A9 /* RandoValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandoValues.swift; sourceTree = "<group>"; };
 		8901789A2A6BE5D100B760A9 /* TableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCell.swift; sourceTree = "<group>"; };
 		8901789D2A6C469200B760A9 /* RandomValueViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomValueViewModel.swift; sourceTree = "<group>"; };
-		AB689DCEAEB9DFCB960142F8 /* Pods-PlumInterview.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlumInterview.release.xcconfig"; path = "Target Support Files/Pods-PlumInterview/Pods-PlumInterview.release.xcconfig"; sourceTree = "<group>"; };
-		EEED50D65F5B46BED6580562 /* Pods-PlumInterview.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlumInterview.debug.xcconfig"; path = "Target Support Files/Pods-PlumInterview/Pods-PlumInterview.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,22 +44,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7D5010478C0C9324CE4CFDBD /* Pods_PlumInterview.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0B5069BF9F5ACF717919FC9B /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				EEED50D65F5B46BED6580562 /* Pods-PlumInterview.debug.xcconfig */,
-				AB689DCEAEB9DFCB960142F8 /* Pods-PlumInterview.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
 		331A938FD2BDDC251AEB979C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -76,7 +63,6 @@
 			children = (
 				890178792A6BD10300B760A9 /* PlumInterview */,
 				890178782A6BD10300B760A9 /* Products */,
-				0B5069BF9F5ACF717919FC9B /* Pods */,
 				331A938FD2BDDC251AEB979C /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -212,11 +198,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8901788E2A6BD10400B760A9 /* Build configuration list for PBXNativeTarget "PlumInterview" */;
 			buildPhases = (
-				74529CC81008E0EE678466C9 /* [CP] Check Pods Manifest.lock */,
 				890178732A6BD10300B760A9 /* Sources */,
 				890178742A6BD10300B760A9 /* Frameworks */,
 				890178752A6BD10300B760A9 /* Resources */,
-				53B8B8B1669E800913744A7F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -272,48 +256,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		53B8B8B1669E800913744A7F /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-PlumInterview/Pods-PlumInterview-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-PlumInterview/Pods-PlumInterview-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PlumInterview/Pods-PlumInterview-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		74529CC81008E0EE678466C9 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-PlumInterview-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		890178732A6BD10300B760A9 /* Sources */ = {
@@ -470,7 +412,6 @@
 		};
 		8901788F2A6BD10400B760A9 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EEED50D65F5B46BED6580562 /* Pods-PlumInterview.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -498,7 +439,6 @@
 		};
 		890178902A6BD10400B760A9 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AB689DCEAEB9DFCB960142F8 /* Pods-PlumInterview.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

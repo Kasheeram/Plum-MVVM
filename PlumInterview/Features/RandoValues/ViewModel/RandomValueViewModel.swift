@@ -7,9 +7,9 @@
 
 import Foundation
 
-final class RandomValueViewModel {
+final class RandomValuesViewModel {
     
-    var randomValues: [RandomValue] = []
+    var randomValues: [RandomValueViewModel] = []
     var eventHandler: ((_ event: Event) -> Void)? // Data Binding Closure
     
     func getRandomValues() {
@@ -18,7 +18,7 @@ final class RandomValueViewModel {
             self.eventHandler?(.stopLoading)
             switch result {
             case .success(let values):
-                self.randomValues.append(values)
+                self.randomValues.append(RandomValueViewModel(randomValue: values))
                 self.eventHandler?(.dataLoaded)
             case .failure(let error):
                 self.eventHandler?(.error(error))
@@ -28,8 +28,19 @@ final class RandomValueViewModel {
     
 }
 
+class RandomValueViewModel {
+    var iconUrl: String
+    var value: String
+    
+    // Dependency Injection (DI)
+    init(randomValue: RandomValue) {
+        self.iconUrl = randomValue.iconUrl ?? ""
+        self.value = randomValue.value ?? ""
+    }
+}
 
-extension RandomValueViewModel {
+
+extension RandomValuesViewModel {
 
     enum Event {
         case loading

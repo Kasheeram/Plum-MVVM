@@ -17,7 +17,7 @@ class TableCell: UITableViewCell {
         return label
     }()
     
-    var randomValue: RandomValue? {
+    var randomValue: RandomValueViewModel? {
         didSet {
             guard let randomValue = randomValue else { return }
             label.text = randomValue.value

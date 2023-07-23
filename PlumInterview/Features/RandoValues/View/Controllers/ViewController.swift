@@ -10,7 +10,7 @@ import UIKit
 class ViewController: UITableViewController {
     
     // MARK: - Variables
-    private var viewModel = RandomValueViewModel()
+    private var viewModel = RandomValuesViewModel()
     
     let cellId = "cellId"
     
@@ -45,7 +45,6 @@ extension ViewController {
     func observeEvent() {
         viewModel.eventHandler = { [weak self] event in
             guard let self else { return }
-            
             switch event {
             case .loading:
                 /// Indicator show

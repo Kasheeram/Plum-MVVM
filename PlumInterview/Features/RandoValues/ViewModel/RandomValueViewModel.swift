@@ -13,6 +13,7 @@ final class RandomValuesViewModel {
     var eventHandler: ((_ event: Event) -> Void)? // Data Binding Closure
     
     func getRandomValues() {
+        self.eventHandler?(.loading)
         Apis.shared.getData(url: "https://api.chucknorris.io/jokes/random") {  (result: Result<RandomValue, PlumError>) in
             
             self.eventHandler?(.stopLoading)

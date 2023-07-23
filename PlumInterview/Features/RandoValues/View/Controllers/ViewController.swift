@@ -9,34 +9,36 @@ import UIKit
 
 class ViewController: UITableViewController {
     
-    // MARK: - Variables
+    // MARK: - ViewModel
     private var viewModel = RandomValuesViewModel()
     
+    // Variable
     let cellId = "cellId"
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setupNavigationBar()
-        configuration()
+        configView()
+        observeEvent()
     }
     
-    private func setupNavigationBar() {
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        initViewModel()
+    }
+    
+    private func configView() {
         navigationItem.title = "Jokes"
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Get Jokes", style: .done, target: self, action: #selector(initViewModel))
-        
+        // Register tableview cell
+        tableView.register(TableCell.self, forCellReuseIdentifier: cellId)
     }
     
 }
 
 // ViewModel
 extension ViewController {
-    func configuration() {
-        tableView.register(TableCell.self, forCellReuseIdentifier: cellId)
-        initViewModel()
-        observeEvent()
-    }
-    
+
     @objc func initViewModel() {
         viewModel.getRandomValues()
     }
